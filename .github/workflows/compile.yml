@@ -18,6 +18,8 @@ jobs:
         sudo apt update
         sudo apt install  libxkbcommon-dev  
         sudo apt install libglib2.0-dev libgio2.0-cil-dev libglib2.0-0
+        sudo apt install libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxkbcommon-x11-dev libxcb-cursor-dev libxcb-randr0-dev libxcb-xinerama0-dev
+
 
     - name: Build C Code
       run: |
