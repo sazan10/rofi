@@ -16,7 +16,8 @@ jobs:
 
     - name: Build C Code
       run: |
+        mkdir build
         git submodule update --init
         autoreconf -i
-        ./configure
+        ./configure --prefix="build"
         make
