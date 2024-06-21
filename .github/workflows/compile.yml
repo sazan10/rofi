@@ -16,7 +16,7 @@ jobs:
     - name: Install deps
       run: |
         sudo apt update
-        sudo apt install -y libxkbcommon-dev libpango libpangocairo libcairo libcairo-xcb libglib2.0 gmodule-2.0 gio-unix-2.0 libgdk-pixbuf-2.0 libstartup-notification-1.0 libxkbcommon libxkbcommon-x11 libxcb xcb-util xcb-util-wm xcb-util-cursor xcb-imdkit     
+        sudo apt install  libxkbcommon-dev glib-2.0 >= 2.72 gio-unix-2.0 gmodule-2.0    
     - name: Build C Code
       run: |
         git submodule update --init
