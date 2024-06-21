@@ -16,5 +16,6 @@ jobs:
 
     - name: Build C Code
       run: |
+        autoreconf -i
         ./configure
         make
