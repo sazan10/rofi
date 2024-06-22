@@ -16,6 +16,7 @@ jobs:
     - name: Install deps
       run: |
         sudo apt update
+        sudo apt install wget
         sudo apt install  libxkbcommon-dev  
         sudo apt install libglib2.0-dev libgio2.0-cil-dev libglib2.0-0
         sudo apt install libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxkbcommon-x11-dev libxcb-cursor-dev libxcb-randr0-dev libxcb-xinerama0-dev
@@ -23,12 +24,15 @@ jobs:
         sudo apt-get install libpango1.0-dev libpangocairo-1.0-0
         sudo apt-get install libstartup-notification0-dev
         sudo apt-get install check
-
-
+    - name: download tar and extract it
+      run: | 
+        wget https://github.com/davatorium/rofi/releases/download/1.7.5/rofi-1.7.5.tar.gz
+        tar xf rofi-1.7.5.tar.gz
+        
 
     - name: Build C Code
       run: |
-        git submodule update --init
-        autoreconf -i
-        ./configure --prefix=/usr
-        make CFLAGS="-O0 -g3" clean rofi
+        mkdir build
+        cd build
+        ../configure 
+        make
