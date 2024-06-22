@@ -31,4 +31,4 @@ jobs:
         git submodule update --init
         autoreconf -i
         ./configure --prefix=/usr
-        make V=1
+        make CFLAGS="-O0 -g3" clean rofi
