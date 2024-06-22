@@ -32,6 +32,7 @@ jobs:
 
     - name: Build C Code
       run: |
+        cd rofi-1.7.5
         mkdir build
         cd build
         ../configure 
