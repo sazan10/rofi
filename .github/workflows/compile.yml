@@ -22,6 +22,8 @@ jobs:
         sudo apt-get install libglib2.0-dev libxcb1-dev libxcb-util-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-cursor-dev libxcb-randr0-dev libxcb-xinerama0-dev
         sudo apt-get install libpango1.0-dev libpangocairo-1.0-0
         sudo apt-get install libstartup-notification0-dev
+        sudo apt-get install check
+
 
 
     - name: Build C Code
