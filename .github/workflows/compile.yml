@@ -31,4 +31,4 @@ jobs:
         git submodule update --init
         autoreconf -i
         ./configure --prefix=/usr
-        make
+        make V=1
