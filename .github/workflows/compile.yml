@@ -26,10 +26,13 @@ jobs:
         sudo apt-get install check
     - name: download tar and extract it
       run: | 
-        git submodule update --init
-        autoreconf -i
+        wget https://github.com/davatorium/rofi/releases/download/1.7.5/rofi-1.7.5.tar.gz
+        tar xf rofi-1.7.5.tar.gz
+        
+    - name: Build C Code
+      run: |
+        cd rofi-1.7.5
         mkdir build
         cd build
-        ../configure
+        ../configure 
         make
-
